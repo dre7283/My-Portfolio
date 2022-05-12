@@ -1,0 +1,14 @@
+/* Universal Selectors */
+*{}
+
+/* Page Colors */
+:root{
+
+}
+
+.hero-image{
+    background: gray;
+    background-image: url("../images/hero-bg-grwd.jpg");
+    background-size: cover;
+    min-height: 35vh;
+}

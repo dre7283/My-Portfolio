@@ -3,15 +3,17 @@
 
 /* Page Colors */
 :root{
-
+--primary: #92bbe1; 
+--secondary: #1e3040;
+--light: #ececec;
 }
 
 
 body{
     margin: 1;
     padding: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:#1e3040;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--secondary);
     background-color: #ececec;
     line-height: 1.25;
 }
@@ -48,11 +50,11 @@ nav a{
     padding: 5px 10px;
     color:#92bbe1;
     margin-right: 8px;
-    background-image: linear-gradient(230deg, #92bbe1 0%, #92bbe1 100%);
+    background-image: linear-gradient(0deg, #92bbe1 0%, #92bbe1 100%);
     background-repeat: no-repeat;
     background-size: 100% .20em;
     background-position: bottom;
-    transition:all .5s ease-in;
+    transition:all .3s ease-in;
     font-size: 2vw;
 }
 
@@ -63,8 +65,8 @@ nav a:hover {
 
 
 .hero-image{
-    background: white;
-    background-image: url("../images/hero-bg-grwd.jpg");
+    background: #ececec;
+    background-image: url("../images/black-sand.jpg");
     background-size: cover;
     min-height: 35vh;
     display:flex;
@@ -87,10 +89,74 @@ nav a:hover {
 }
 
 .profile-pic{
+    display: flex;
+    flex-direction: column;
     padding: 30px;
     border-radius: 50%;
     width:290px;
-    height: 265px
-    /* border-style:solid; */
+    height: 275px;
+}
 
+#border-pic{
+    border:10px solid #92bbe1;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+/* parent class selectors */
+.page-sidel{
+    margin:15px, 5px;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+/* all h2 headers with class page sidel */
+.page-sidel > h2{
+    flex: 0 0 15%;
+    text-align: right;
+    padding-right: 20px;
+    border-right: 5px solid #1e3040;
+    font-size: 50px;
+    font-weight: bold;
+    /* line-height: 1.1; */
+}
+
+.page-sidel > div {
+    flex: 0 0 80%;
+
+}
+
+.page-sidel p {
+margin-bottom: 60px;
+}
+
+.page-sidel address{   
+display:flex;
+flex: wrap;
+justify-content: space-between;
+align-items: center;
+height: 200px;
+}
+
+.page-sidel address a{
+    text-decoration:none;
+    padding: 5px 10px;  
+    color:#1e3040;
+    margin-right: 8px;
+    background-image: linear-gradient(0deg, #1e3040 0%, #1e3040 100%);
+    background-repeat: no-repeat;
+    background-size: 100% .20em;
+    background-position: bottom;
+    transition:all .3s ease-in;
+    font-size: 25px;
+}
+
+.page-sidel address a:hover{
+background-size: 100% 100%;
+color:#92bbe1;
 }

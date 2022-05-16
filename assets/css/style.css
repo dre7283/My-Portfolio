@@ -156,8 +156,9 @@ color: var(--dark);
     max-height: 350px;
     flex-basis: calc(50% - 40px);
     background-size: 100%;
+    background-repeat: no-repeat;
     margin: 20px;
-    padding: 5px 5px 20px 0; 
+    padding: 5px 5px 20px 5px; 
     text-decoration: none;
     border: 6px solid var(--bglight);
     color: var(--bgwords);
@@ -235,5 +236,30 @@ height: 200px;
         padding: 0 0 10px 0;
         justify-content: center;
         text-align: center;
+    }
+
+    header h1 {
+        width: 100%;
+        padding:10px;
+        margin-bottom: 20px;
+        font-size: 10vw;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .page-sidel > h2, 
+    .page-side1 > div {
+        flex: 0 0 50%;
+    }
+
+    .page-side1 > h2{
+        border-right: none;
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+        text-align: left;   
+        font-size: 7vw; 
+
     }
 }

@@ -5,7 +5,9 @@
 :root{
 --light: #92bbe1; 
 --dark: #1e3040;
---backlight: #ececec;
+--backlight: #e7e7e7;
+--bgwords: #646d74;
+--bglight: #b3e0ea;
 }
 
 
@@ -24,13 +26,13 @@ header{
     flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: #1e3040;
+    background-color: var(--dark);
     padding: 15px 20px 15px 0;
 }
 
 header h1{
-color:#1e3040;
-background-color: #92bbe1;
+color: var(--dark);
+background-color: var(--light);
 padding: 1px 3% 5px 3%;
 margin: 0;
 font-size: 4vw;
@@ -48,9 +50,9 @@ nav{
 nav a{
     text-decoration:none;
     padding: 5px 10px;
-    color:#92bbe1;
+    color:var(--light);
     margin-right: 8px;
-    background-image: linear-gradient(0deg, #92bbe1 0%, #92bbe1 100%);
+    background-image: linear-gradient(0deg, var(--light) 0%, var(--light) 100%);
     background-repeat: no-repeat;
     background-size: 100% .20em;
     background-position: bottom;
@@ -60,7 +62,7 @@ nav a{
 
 nav a:hover {
     background-size: 100% 100%;
-    color: #1e3040;
+    color: var(--dark);
 }
 
 
@@ -80,8 +82,8 @@ nav a:hover {
 
 .hero-image h2{
     font-size: 30px;
-    background-color: #92bbe1;
-    color: #1e3040; 
+    background-color: var(--light);
+    color: var(--dark); 
     padding: 1px 5px;
     line-height: 2;
     display:inline;
@@ -92,13 +94,13 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    border-radius: 50%;
+    border-radius: 60%;
     width:290px;
     height: 275px;
 }
 
 #border-pic{
-    border:10px solid #92bbe1;
+    border:10px solid var(--bglight);
     border-radius: 50%;
     padding: 5px;
 }
@@ -120,7 +122,7 @@ nav a:hover {
     flex: 0 0 15%;
     text-align: right;
     padding-right: 20px;
-    border-right: 5px solid #1e3040;
+    border-right: 5px solid var(--dark);
     font-size: 50px;
     font-weight: bold;
     line-height: 1.5;
@@ -133,9 +135,73 @@ nav a:hover {
 }
 
 .page-sidel p {
-margin-bottom: 20px;
+margin: 30px 40px;
+padding: 20px 20px;
+font-size:20px;
+color: var(--dark);
 }
 
+/* flex properties for work pictures */
+
+.flex-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-pics{
+    display:flex;
+    align-items: flex-end;
+    min-height: 250px;
+    max-height: 350px;
+    flex-basis: calc(50% - 40px);
+    background-size: 100%;
+    margin: 20px;
+    padding: 5px 5px 20px 0; 
+    text-decoration: none;
+    border: 6px solid var(--bglight);
+    color: var(--bgwords);
+    transition: all 0.5s;
+    background-blend-mode: soft-light;
+    background-color: var(--bgwords)
+}
+
+.flex-pics:first-child{
+    min-height:400px;
+    flex-basis: 100%;
+}
+
+.flex-pics div {
+    background-color: var(--bglight);
+    padding: 15px 10px;
+
+}
+
+.flex-pics:hover {
+    background-color: rgba(30,48,64,0.2);
+}
+/* work section pictures */
+.Project1{
+    background-image: url("../images/black-sand-beachc.jpg");
+}
+
+.Project2{
+    background-image: url("../images/driftwood.jpg");
+}
+
+.Project3{
+    background-image: url("../images/purple-palm.jpg");
+}
+
+.Project4{
+    background-image: url("../images/gray-rocks.jpg");
+}
+
+.Project5{
+    background-image: url("../images/sandy-beach.jpg");
+}
+
+/* Contact Section */
 .page-sidel address{   
 display:flex;
 flex: wrap;
@@ -147,9 +213,9 @@ height: 200px;
 .page-sidel address a{
     text-decoration:none;
     padding: 5px 20px;  
-    color:#1e3040;
+    color:var(--dark);
     margin-right: 30px;
-    background-image: linear-gradient(0deg, #1e3040 0%, #1e3040 100%);
+    background-image: linear-gradient(0deg, var(--dark) 0%, var(--dark) 100%);
     background-repeat: no-repeat;
     background-size: 100% .20em;
     background-position: bottom;
@@ -158,11 +224,16 @@ height: 200px;
 }
 
 .page-sidel address a:hover{
-background-size: 100% 100%;
-color:#92bbe1;
+    background-size: 100% 100%;
+    color:var(--bglight);
 }
 
-/* work section pictures */
-.Project1{
-    
+/* to do add all media query information */
+
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
 }

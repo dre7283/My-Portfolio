@@ -155,7 +155,7 @@ color: var(--dark);
     min-height: 250px;
     max-height: 350px;
     flex-basis: calc(50% - 40px);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     margin: 20px;
     padding: 5px 5px 20px 5px; 
@@ -165,6 +165,7 @@ color: var(--dark);
     transition: all 0.5s;
     background-blend-mode: soft-light;
     background-color: var(--bgwords)
+    
 }
 
 .flex-pics:first-child{
@@ -231,7 +232,7 @@ height: 200px;
 
 /* to do add all media query information */
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 568px) {
     header {
         padding: 0 0 10px 0;
         justify-content: center;
@@ -251,7 +252,7 @@ height: 200px;
 
     .page-sidel > h2, 
     .page-side1 > div {
-        flex: 0 0 50%;
+        flex: 0 0 100%;
     }
 
     .page-side1 > h2{
@@ -260,6 +261,18 @@ height: 200px;
         padding-bottom: 3px;
         text-align: left;   
         font-size: 7vw; 
-
     }
+    .page-sidel{
+        width: 100%;
+    }
+    .flex-parent{
+        display:flex;
+        width: 100%;
+    }
+    .Project1{
+        width: 100%;
+        height:100vh;
+    }
+
+    
 }
